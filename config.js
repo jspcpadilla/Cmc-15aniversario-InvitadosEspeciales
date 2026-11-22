@@ -1,5 +1,5 @@
 window.CMC_CONFIG={event:{
-dateText:"FECHA POR DEFINIR",
+dateText:"6 DE DICIEMBRE DE 2026",
 startISO:"2027-01-01T15:00:00-05:00",
 massTime:"3:00 p. m.",
 massPlace:"Iglesia Torcoroma",
