@@ -1,47 +1,727 @@
-<!doctype html><html lang="es"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f7f3eb"><title>CMC · 15 años</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"></head><body>
-<div id="loader" class="loader"><b>CMC</b><i></i><span>Cargando experiencia</span></div>
-<div class="app"><div class="grain"></div><button id="soundToggle" class="sound">♫</button>
-<section id="intro" class="scene active"><div class="center"><div class="brand">CMC</div><div class="goldline"></div>
-<p class="eyebrow">Centro Médico Cognitivo e Investigación</p><h1>Tenemos algo<br><em>especial</em> que celebrar.</h1>
-<p class="sub">Una experiencia creada para compartir contigo una historia de 15 años.</p>
-<button id="begin" class="pill">TOCA PARA COMENZAR <b>→</b></button></div><small class="bottom">Una experiencia interactiva · 15 años</small></section>
+<!doctype html>
+<html lang="es">
 
-<section id="lights" class="scene"><div class="center wide"><p class="eyebrow">Una historia iluminada por muchas manos</p>
-<h2>Enciende nuestras<br><em>15 luces</em></h2><p class="hint">Toca cada vela. Una a una, construiremos el 15.</p>
-<div id="candles" class="candles"></div><div class="counter"><b id="count">0</b> / 15</div></div></section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 
-<section id="reveal" class="scene"><div id="sparkles"></div><div class="center"><p class="eyebrow">Centro Médico Cognitivo e Investigación</p>
-<div class="big15">15</div><div class="years">AÑOS</div><div class="goldline"></div><p class="revealmsg">Una historia de servicio,<br>conocimiento y humanidad.</p></div></section>
+  <meta name="theme-color" content="#f8f1e6">
 
-<section id="invite" class="scene invite-scene"><main class="card">
-<header><div class="brandlock"><strong>CMC</strong><span>Centro Médico Cognitivo<br>e Investigación</span></div><div class="mini">15<br><small>AÑOS</small></div></header>
-<div class="rule"></div><p class="eyebrow">Una celebración de trayectoria</p>
-<h2>Cuando las manos se unen,<br>los sueños se convierten<br><em>en legado.</em></h2>
-<div class="copy"><p>Al celebrar 15 años de trayectoria, damos gracias a Dios por cada persona que ha hecho posible nuestra misión en salud mental y neurodesarrollo.</p>
-<p>Agradecemos a las familias por su confianza, a nuestro equipo por la entrega con la que acompaña a quienes atendemos y a nuestros aliados por aportar su conocimiento y experiencia a los proyectos que hemos hecho realidad.</p></div>
-<div class="rule short"></div><p class="closing">Te invitamos a celebrar con nosotros<br>esta historia que también es tuya.</p>
-<div class="events">
-<article><b>✦</b><h3>Eucaristía de acción de gracias</h3><p id="massTime">3:00 p. m.</p><p id="massPlace">Iglesia Torcoroma</p><a id="massMap" target="_blank">Ver ubicación →</a></article>
-<article>
-    <b>✦</b>
-    <h3>Cóctel de aniversario</h3>
-    <p>5:00 p. m.</p>
-    <p id="cocktailPlace">Hotel Movich</p>
-    <a id="cocktailMap" target="_blank">Ver ubicación →</a>
-</article>
-<article><b>✦</b><h3>Vestimenta</h3><p>En tonos claros</p></article></div>
-<div class="date"><span>FECHA</span><strong id="date"></strong></div>6 DE DICIEMBRE DE 2026
-<div class="actions"><button id="calendar" class="primary">＋ Agregar al calendario</button><button id="rsvp">✓ Confirmar asistencia</button><button id="share">↗ Compartir invitación</button></div>
-<footer><div class="rule short"></div><p>15 años haciendo historia juntos.</p><small>CMC · Un lugar para ti</small></footer>
-</main></section>
+  <meta name="description" content="Invitación interactiva CMC · 15 años">
 
-<div id="modal" class="modal"><div class="backdrop"></div><div class="modalbox"><button id="close">×</button><p class="eyebrow">RSVP</p><h2>Confirma tu asistencia</h2><p class="modalcopy">Este formulario funciona localmente en el prototipo y puede conectarse después a Microsoft Forms, Django o WhatsApp.</p>
-<form id="form"><label>Nombre completo<input required name="name"></label><label>Correo electrónico<input required type="email" name="email"></label>
-<label>Asistencia<select required name="attendance"><option value="">Selecciona</option><option>Sí, asistiré</option><option>No podré asistir</option></select></label>
-<label>Acompañantes<input type="number" min="0" max="10" name="guests" value="0"></label><button class="primary" type="submit">Enviar confirmación</button></form><div id="success" hidden>✓ Confirmación registrada en el prototipo.</div></div></div>
-<div id="toast"></div></div><script src="config.js"></script><script src="app.js"></script></body></html>
+  <title>CMC · 15 años</title>
+
+  <!-- =========================================================
+       GOOGLE FONTS
+       ========================================================= -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- =========================================================
+       ESTILOS
+       ========================================================= -->
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+
+  <main class="app">
+
+
+    <!-- =======================================================
+         MARCO DECORATIVO
+         ======================================================= -->
+
+    <div class="visual-frame" aria-hidden="true">
+
+      <span class="frame-line outer"></span>
+      <span class="frame-line inner"></span>
+
+      <span class="corner tl"></span>
+      <span class="corner tr"></span>
+      <span class="corner bl"></span>
+      <span class="corner br"></span>
+
+      <span class="star top">✦</span>
+      <span class="star bottom">✦</span>
+
+
+      <!-- RAMA DECORATIVA SUPERIOR DERECHA -->
+
+      <svg class="botanical top-right" viewBox="0 0 220 310">
+
+        <g>
+
+          <path
+            d="M208 3C178 40 177 92 146 124S99 196 58 225C36 241 20 270 6 304"
+          />
+
+          <path
+            d="M155 67C130 54 113 39 102 18M151 93C178 88 194 77 212 58M116 143C90 127 73 112 62 89M104 163C131 161 154 149 176 130M76 202C52 190 38 176 28 154M66 215C88 212 111 202 129 187"
+          />
+
+          <ellipse
+            cx="119"
+            cy="35"
+            rx="18"
+            ry="8"
+            transform="rotate(30 119 35)"
+          />
+
+          <ellipse
+            cx="181"
+            cy="75"
+            rx="20"
+            ry="9"
+            transform="rotate(-27 181 75)"
+          />
+
+          <ellipse
+            cx="75"
+            cy="105"
+            rx="21"
+            ry="9"
+            transform="rotate(35 75 105)"
+          />
+
+          <ellipse
+            cx="147"
+            cy="145"
+            rx="23"
+            ry="10"
+            transform="rotate(-29 147 145)"
+          />
+
+          <ellipse
+            cx="38"
+            cy="170"
+            rx="20"
+            ry="9"
+            transform="rotate(36 38 170)"
+          />
+
+          <ellipse
+            cx="104"
+            cy="204"
+            rx="23"
+            ry="10"
+            transform="rotate(-28 104 204)"
+          />
+
+          <circle cx="154" cy="33" r="5" />
+          <circle cx="185" cy="49" r="5" />
+          <circle cx="199" cy="88" r="5" />
+          <circle cx="128" cy="118" r="5" />
+          <circle cx="92" cy="158" r="5" />
+          <circle cx="47" cy="204" r="5" />
+
+        </g>
+
+      </svg>
+
+
+      <!-- RAMA DECORATIVA INFERIOR IZQUIERDA -->
+
+      <svg class="botanical bottom-left" viewBox="0 0 260 300">
+
+        <g>
+
+          <path
+            d="M5 294C37 254 58 217 83 184S136 112 169 88 220 36 248 6"
+          />
+
+          <path
+            d="M83 184C55 183 35 172 16 151M103 157C132 154 157 142 177 122M129 124C103 112 86 95 78 73M151 103C177 102 197 92 215 76M58 221C36 215 20 202 8 183"
+          />
+
+          <ellipse
+            cx="44"
+            cy="170"
+            rx="24"
+            ry="10"
+            transform="rotate(34 44 170)"
+          />
+
+          <ellipse
+            cx="145"
+            cy="147"
+            rx="24"
+            ry="10"
+            transform="rotate(-29 145 147)"
+          />
+
+          <ellipse
+            cx="93"
+            cy="91"
+            rx="23"
+            ry="10"
+            transform="rotate(35 93 91)"
+          />
+
+          <ellipse
+            cx="188"
+            cy="96"
+            rx="23"
+            ry="10"
+            transform="rotate(-28 188 96)"
+          />
+
+          <ellipse
+            cx="28"
+            cy="208"
+            rx="20"
+            ry="9"
+            transform="rotate(34 28 208)"
+          />
+
+          <ellipse
+            cx="187"
+            cy="60"
+            rx="19"
+            ry="8"
+            transform="rotate(-30 187 60)"
+          />
+
+          <circle cx="71" cy="185" r="5" />
+          <circle cx="58" cy="151" r="5" />
+          <circle cx="120" cy="131" r="5" />
+          <circle cx="161" cy="113" r="5" />
+          <circle cx="207" cy="76" r="5" />
+
+        </g>
+
+      </svg>
+
+    </div>
+
+
+    <!-- =======================================================
+         CONTROL DE SONIDO
+         ======================================================= -->
+
+    <button
+      id="soundToggle"
+      class="sound-toggle"
+      type="button"
+      aria-label="Activar sonido">
+      ♪
+    </button>
+
+
+    <!-- =======================================================
+         ESCENA 1 · LOGO
+         ======================================================= -->
+
+    <section
+      id="scene-logo"
+      class="scene active"
+      aria-hidden="false">
+
+      <div class="logo-stage">
+
+        <img
+          src="assets/logo-cmc.png"
+          alt="CMC"
+          class="logo-main">
+
+        <img
+          src="assets/15-anos.png"
+          alt="15 años"
+          class="anniversary-main">
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         ESCENA 2 · CARGANDO
+         ======================================================= -->
+
+    <section
+      id="scene-loading"
+      class="scene"
+      aria-hidden="true">
+
+      <div class="loading-stage">
+
+        <p class="eyebrow">
+          CENTRO MÉDICO COGNITIVO E INVESTIGACIÓN
+        </p>
+
+        <div class="loading-mark"></div>
+
+        <p>
+          Cargando experiencia
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         ESCENA 3 · BIENVENIDA
+         ======================================================= -->
+
+    <section
+      id="scene-welcome"
+      class="scene"
+      aria-hidden="true">
+
+      <div class="welcome-stage">
+
+
+        <!-- =================================================
+             LOGOS SUPERIORES
+             ================================================= -->
+
+        <div class="welcome-branding">
+
+          <img
+            src="assets/logo-cmc.png"
+            alt="Centro Médico Cognitivo e Investigación"
+            class="welcome-logo-cmc">
+
+          <img
+            src="assets/15-anos.png"
+            alt="15 años"
+            class="welcome-logo-15">
+
+        </div>
+
+
+        <!-- =================================================
+             CONTENIDO CENTRAL
+             ================================================= -->
+
+        <div class="welcome-content">
+
+          <p class="eyebrow">
+            EN CENTRO MÉDICO COGNITIVO E INVESTIGACIÓN
+          </p>
+
+          <h1>
+            Tenemos algo<br>
+            <em>especial</em> que celebrar.
+          </h1>
+
+          <p class="welcome-copy">
+            Una experiencia creada para compartir contigo una historia de 15 años.
+          </p>
+
+          <button
+            class="primary-button"
+            id="begin"
+            type="button">
+
+            TOCA PARA COMENZAR
+
+            <b>→</b>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         ESCENA 4 · INVITACIÓN
+         
+         IMPORTANTE:
+         Esta escena ahora está directamente dentro de .app.
+         Ya NO depende de scene-welcome.
+         ======================================================= -->
+
+    <section
+      id="scene-invitation"
+      class="scene scene-invitation"
+      aria-hidden="true">
+
+
+      <!-- =====================================================
+           PARTÍCULAS DECORATIVAS
+           ===================================================== -->
+
+      <div
+        id="celebrationParticles"
+        class="celebration-particles"
+        aria-hidden="true">
+      </div>
+
+
+      <!-- =====================================================
+           CONTENEDOR CON SCROLL
+           ===================================================== -->
+
+      <div class="invitation-scroll">
+
+        <div class="invitation-content">
+
+
+          <!-- =================================================
+               BRANDING DE LA INVITACIÓN
+               ================================================= -->
+
+          <div class="invitation-branding">
+
+            <img
+              src="assets/logo-cmc.png"
+              alt="Centro Médico Cognitivo e Investigación"
+              class="invitation-logo-cmc">
+
+            <img
+              src="assets/15-anos.png"
+              alt="15 años"
+              class="invitation-logo-15">
+
+          </div>
+
+
+          <!-- =================================================
+               INTRODUCCIÓN
+               ================================================= -->
+
+          <section class="invitation-intro">
+
+            <p class="eyebrow">
+              15 AÑOS · UNA HISTORIA QUE CONTINÚA
+            </p>
+
+            <h2>
+              Cuando las manos se unen,<br>
+              <em>los sueños se convierten en legado.</em>
+            </h2>
+
+
+            <div class="invitation-text">
+
+              <p>
+                Hoy damos gracias a Dios por tomarnos de la mano,
+                ir delante de nosotros y sostenernos en cada etapa
+                de nuestra historia.
+              </p>
+
+              <p>
+                Reconocemos su respaldo en cada puerta abierta,
+                en las personas que han creído en nuestra misión y
+                en cada proyecto, contrato y convenio que nos ha
+                permitido crecer y servir a más familias.
+              </p>
+
+              <p>
+                A nuestros colaboradores, socios y aliados, gracias
+                por aportar su entrega, confianza y conocimiento
+                a esta historia compartida. Su compromiso ha hecho
+                posible cuidar, aprender y transformar vidas.
+              </p>
+
+              <p>
+                Hoy ponemos en manos de Dios los caminos y proyectos
+                que vienen y renovamos nuestra vocación de servicio
+                a la salud mental y al neurodesarrollo.
+              </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 MENSAJE FINAL
+                 ================================================= -->
+
+            <p class="invitation-thanks">
+              Gracias por caminar con nosotros.
+            </p>
+
+
+            <!-- =================================================
+                 FIRMA
+                 ================================================= -->
+
+            <div class="invitation-signature">
+
+              <strong>CMC</strong>
+
+              <span>·</span>
+
+              <strong>15 años</strong>
+
+              <small>
+                Un lugar para ti
+              </small>
+
+            </div>
+
+          </section>
+
+
+          <!-- =================================================
+               INFORMACIÓN DEL EVENTO
+               ================================================= -->
+
+          <section class="event-information">
+
+
+            <p class="event-intro">
+              Te invitamos a celebrar con nosotros esta historia
+              que también es tuya.
+            </p>
+
+
+            <!-- =================================================
+                 COLUMNAS DE EVENTOS
+                 ================================================= -->
+
+            <div class="event-columns">
+
+
+              <!-- =================================================
+                   EUCARISTÍA
+                   ================================================= -->
+
+              <article class="event-item">
+
+                <span class="event-star">
+                  ✦
+                </span>
+
+                <h3>
+                  Eucaristía de acción de gracias
+                </h3>
+
+                <p class="event-time">
+                  3:00 p. m.
+                </p>
+
+                <p>
+                  Iglesia Torcoroma
+                </p>
+
+                <a
+                  class="location-link"
+                  href="https://www.google.com/maps/search/?api=1&query=Iglesia+Torcoroma+Barranquilla"
+                  target="_blank"
+                  rel="noopener">
+
+                  Ver ubicación →
+
+                </a>
+
+              </article>
+
+
+              <!-- =================================================
+                   CÓCTEL
+                   ================================================= -->
+
+              <article class="event-item">
+
+                <span class="event-star">
+                  ✦
+                </span>
+
+                <h3>
+                  Cóctel de aniversario
+                </h3>
+
+                <p class="event-time">
+                  5:00 p. m.
+                </p>
+
+                <p>
+                  Hotel Movich
+                </p>
+
+                <a
+                  class="location-link"
+                  href="https://www.google.com/maps/search/?api=1&query=Hotel+Movich+Barranquilla"
+                  target="_blank"
+                  rel="noopener">
+
+                  Ver ubicación →
+
+                </a>
+
+              </article>
+
+
+              <!-- =================================================
+                   VESTIMENTA
+                   ================================================= -->
+
+              <article class="event-item">
+
+                <span class="event-star">
+                  ✦
+                </span>
+
+
+                <div
+                  class="clothing-icon"
+                  aria-hidden="true">
+
+                  <span class="clothing-body"></span>
+
+                </div>
+
+
+                <h3>
+                  Vestimenta
+                </h3>
+
+                <p>
+                  Tonos claros
+                </p>
+
+                <p class="dress-note">
+                  Una celebración para compartir con elegancia.
+                </p>
+
+              </article>
+
+            </div>
+
+
+            <!-- =================================================
+                 FECHA
+                 ================================================= -->
+
+            <div class="event-date">
+
+              <span>
+                RESERVA LA FECHA
+              </span>
+
+              <strong>
+                6 DE DICIEMBRE DE 2026
+              </strong>
+
+            </div>
+
+
+            <!-- =================================================
+                 BOTONES
+                 ================================================= -->
+
+            <div class="event-actions">
+
+              <button
+                id="calendarButton"
+                class="event-button"
+                type="button">
+
+                + Agregar al calendario
+
+              </button>
+
+
+              <button
+                id="attendanceButton"
+                class="event-button primary"
+                type="button">
+
+                ✓ Confirmar asistencia
+
+              </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 FORMULARIO DE CONFIRMACIÓN
+                 ================================================= -->
+
+            <section
+              id="attendanceFormSection"
+              class="attendance-section"
+              aria-hidden="true">
+
+              <div class="attendance-form-wrapper">
+
+                <p class="eyebrow">
+                  CONFIRMACIÓN
+                </p>
+
+                <h2>
+                  Confirma tu <em>asistencia.</em>
+                </h2>
+
+                <p class="attendance-description">
+                  Para registrar tu asistencia te llevaremos al
+                  formulario oficial de Microsoft Forms. Allí podrás
+                  completar tus datos y enviar tu confirmación.
+                </p>
+
+
+                <form id="attendanceForm">
+
+                  <button
+                    class="attendance-submit"
+                    type="submit">
+
+                    <span>
+                      Continuar con la confirmación
+                    </span>
+
+                    <span>
+                      →
+                    </span>
+
+                  </button>
+
+                </form>
+
+              </div>
+
+            </section>
+
+          </section>
+
+
+          <!-- =================================================
+               FOOTER
+               ================================================= -->
+
+          <footer class="invitation-footer">
+
+            <span>
+              CMC · CENTRO MÉDICO COGNITIVO E INVESTIGACIÓN
+            </span>
+
+            <span>
+              15 AÑOS · UN LUGAR PARA TI
+            </span>
+
+          </footer>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
