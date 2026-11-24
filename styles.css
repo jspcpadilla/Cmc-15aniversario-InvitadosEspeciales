@@ -1,1 +1,2542 @@
-:root{--ivory:#f7f3eb;--paper:#fffdf9;--navy:#16243a;--mag:#97155c;--gold:#c79a43;--line:rgba(199,154,67,.35);--muted:#817b72}*{box-sizing:border-box}body{margin:0;background:var(--ivory);color:var(--navy);font-family:"Cormorant Garamond",Georgia,serif}.app{min-height:100svh;overflow:hidden;position:relative}.grain{position:fixed;inset:0;z-index:20;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}.loader{position:fixed;inset:0;z-index:100;display:grid;place-content:center;justify-items:center;background:var(--ivory);transition:.8s}.loader.hide{opacity:0;visibility:hidden}.loader b{font:700 24px Montserrat;letter-spacing:7px;color:var(--mag)}.loader i{width:70px;height:1px;background:var(--gold);margin:14px}.loader span,.eyebrow{font:600 10px Montserrat;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}.scene{min-height:100svh;display:none;place-items:center;padding:25px 18px;position:relative}.scene.active{display:grid;animation:in .8s ease}@keyframes in{from{opacity:0;transform:scale(1.01)}to{opacity:1;transform:none}}.center{text-align:center;max-width:850px;width:100%}.brand{font:700 19px Montserrat;letter-spacing:7px;color:var(--mag)}.goldline{width:90px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:22px auto}.center h1{font-size:clamp(44px,10vw,86px);font-weight:400;line-height:.94;margin:22px 0}.center h1 em,h2 em{color:var(--mag);font-style:italic}.sub{font:400 13px/1.7 Montserrat;color:#625d55;max-width:490px;margin:0 auto 30px}.pill{border:1px solid var(--gold);background:#fffdf9b8;padding:15px 25px;border-radius:999px;font:600 10px Montserrat;letter-spacing:2px;color:var(--navy)}.pill b{color:var(--mag);margin-left:10px}.bottom{position:absolute;bottom:20px;font:500 9px Montserrat;letter-spacing:2px;color:#aaa}.wide{max-width:1000px}.wide h2{font-size:clamp(42px,8vw,72px);line-height:.93;font-weight:400;margin:10px 0}.hint{font:400 12px Montserrat;color:var(--muted);margin:16px 0 32px}.candles{width:min(760px,95vw);margin:auto;display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(8px,3vw,30px)}.candle{height:clamp(110px,18vw,150px);border:0;background:transparent;position:relative;display:flex;align-items:flex-end;justify-content:center;cursor:pointer}.number{position:absolute;top:0;font:500 9px Montserrat;color:#aaa}.bodyc{width:clamp(26px,5vw,45px);height:clamp(62px,11vw,90px);border-radius:9px 9px 5px 5px;background:linear-gradient(90deg,#d0bb89,#fff6da 46%,#d7bd82);box-shadow:inset 0 0 0 1px #a67e321f,0 8px 18px #4b361616}.wick{position:absolute;bottom:clamp(62px,11vw,90px);width:2px;height:9px;background:#453b2e}.flame{position:absolute;bottom:calc(clamp(62px,11vw,90px) + 1px);width:23px;height:34px;opacity:0;transform:scale(.2);background:radial-gradient(ellipse at 50% 72%,#fffbd0 0 18%,#ffd75e 34%,#dc8428 68%,transparent 72%);border-radius:60%;filter:drop-shadow(0 0 11px #e7aa39);transition:.4s}.candle.lit .flame{opacity:1;transform:scale(1);animation:flicker .9s infinite alternate}@keyframes flicker{to{rotate:2deg;scale:1.08}}.counter{margin-top:28px;font:600 13px Montserrat;color:#aaa;letter-spacing:2px}.counter b{font-size:30px;color:var(--mag)}.big15{font-size:clamp(180px,42vw,430px);line-height:.6;color:var(--gold);letter-spacing:-.08em;text-shadow:0 15px 60px #9b76201f}.years{font:500 13px Montserrat;letter-spacing:10px;color:var(--gold);margin-top:30px}.revealmsg{font-size:25px;line-height:1.1;font-style:italic}.spark{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold);animation:sp 1.7s ease-out forwards}@keyframes sp{0%{opacity:0}20%{opacity:1}100%{opacity:0;transform:translate(var(--x),var(--y))}}.invite-scene{background:linear-gradient(145deg,#f8f5ee,#f1ece2);padding:45px 16px}.card{width:min(980px,100%);background:#fffdf9f2;border:1px solid var(--line);box-shadow:0 35px 100px #221b111f;padding:clamp(28px,7vw,75px);position:relative}.card:before,.card:after{content:"";position:absolute;width:150px;height:150px;border:1px solid #c79a4355;border-radius:50%}.card:before{left:-100px;top:-100px}.card:after{right:-100px;bottom:-100px}.card header{display:flex;justify-content:space-between;gap:20px}.brandlock{display:flex;gap:12px;align-items:center}.brandlock strong{font:700 27px Montserrat;letter-spacing:2px;color:var(--mag)}.brandlock span{font:500 9px/1.5 Montserrat}.mini{font-size:40px;line-height:.72;color:var(--gold);text-align:right}.mini small{font:600 8px Montserrat;letter-spacing:3px}.rule{height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:32px 0}.rule.short{width:70px;background:var(--gold)}.card h2{font-size:clamp(38px,6.5vw,68px);line-height:.96;font-weight:400;margin:14px 0 35px}.copy{max-width:760px;font:400 14px/1.85 Montserrat;color:#303a4a}.closing{font-size:clamp(25px,4vw,38px);font-style:italic;line-height:1.1}.events{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:1px;background:var(--line);margin-top:20px}.events article{background:var(--paper);padding:25px;min-height:145px}.events article>b{color:var(--gold)}.events h3{font-size:18px;color:var(--mag);margin:8px 0 10px}.events p{font:400 13px/1.5 Montserrat;margin:2px 0}.events a{display:inline-block;margin-top:12px;color:var(--mag);font:600 10px Montserrat;text-decoration:none}.date{border-block:1px solid var(--line);padding:17px;text-align:center;margin-top:28px}.date span{display:block;font:600 9px Montserrat;letter-spacing:3px;color:var(--muted)}.date strong{font:600 14px Montserrat}.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:28px}.actions button,.primary{border:1px solid var(--gold);border-radius:999px;padding:13px 18px;font:600 10px Montserrat;letter-spacing:1px;background:transparent;color:var(--navy)}.actions .primary,.primary{background:var(--navy);color:#fff;border-color:var(--navy)}footer{text-align:center;margin-top:48px}footer p{font-size:25px;font-style:italic;margin:0 0 5px}footer small{font:500 9px Montserrat;letter-spacing:2px;color:var(--mag)}.sound{position:fixed;right:18px;top:18px;z-index:40;border:1px solid var(--line);background:#fffdf9b8;border-radius:50%;width:40px;height:40px}.modal{display:none;position:fixed;inset:0;z-index:60;place-items:center;padding:20px}.modal.open{display:grid}.backdrop{position:absolute;inset:0;background:#10192799;backdrop-filter:blur(8px)}.modalbox{position:relative;z-index:1;background:var(--paper);width:min(500px,100%);padding:32px;box-shadow:0 30px 80px #0004}.modalbox>button{position:absolute;right:12px;top:7px;border:0;background:none;font-size:28px}.modalbox h2{font-size:40px;font-weight:400;margin:10px 0}.modalcopy{font:400 12px/1.6 Montserrat;color:var(--muted)}form{display:grid;gap:13px;margin-top:20px}label{font:600 9px Montserrat;letter-spacing:1px;text-transform:uppercase}input,select{display:block;width:100%;margin-top:6px;border:1px solid #ddd3c2;background:#fffdf9;padding:11px}.toast{position:fixed;z-index:80;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;background:var(--navy);color:#fff;padding:11px 16px;border-radius:999px;font:500 10px Montserrat;transition:.3s}.toast.show{opacity:1;transform:translate(-50%,0)}#success{margin-top:18px;padding:14px;background:#f1eadc;font:500 12px Montserrat}@media(max-width:720px){.events{grid-template-columns:1fr}.card{padding:30px 21px}.brandlock span{font-size:8px}.candles{gap:5px}}@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+:root {
+  --ivory: #f8f1e6;
+  --paper: #fffaf2;
+  --blue: #172942;
+  --muted: #66758a;
+  --magenta: #b30b62;
+  --gold: #c99535;
+  --gold-soft: rgba(201, 149, 53, 0.45);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background: var(--ivory);
+}
+body {
+  overflow: hidden;
+  color: var(--blue);
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.app {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  min-height: 100svh;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255, 255, 255, 0.8),
+      transparent 48%
+    ),
+    linear-gradient(135deg, #f4ecdf, #fffaf2 50%, #f2e8da);
+  isolation: isolate;
+}
+.visual-frame {
+  position: absolute;
+  inset: clamp(9px, 1.6vw, 30px);
+  z-index: 50;
+  pointer-events: none;
+}
+.frame-line {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid var(--gold);
+}
+.frame-line.inner {
+  inset: clamp(7px, 1vw, 15px);
+  border-color: rgba(201, 149, 53, 0.48);
+}
+.corner {
+  position: absolute;
+  width: clamp(34px, 5vw, 80px);
+  height: clamp(34px, 5vw, 80px);
+}
+.corner:before,
+.corner:after {
+  content: "";
+  position: absolute;
+  background: var(--gold);
+}
+.corner:before {
+  width: 100%;
+  height: 1.5px;
+}
+.corner:after {
+  height: 100%;
+  width: 1.5px;
+}
+.tl {
+  top: 0;
+  left: 0;
+}
+.tr {
+  top: 0;
+  right: 0;
+  transform: rotate(90deg);
+}
+.bl {
+  bottom: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+.br {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+.star {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+.star.top {
+  top: -0.65em;
+}
+.star.bottom {
+  bottom: -0.65em;
+}
+.botanical,
+.top-right,
+.bottom-left {
+  display: none !important;
+}
+
+/* Decoración única: imagen real en la esquina superior derecha. */
+.visual-frame::after {
+  content: "";
+  position: absolute;
+  top: clamp(8px, 1.2vw, 18px);
+  right: clamp(8px, 1.2vw, 18px);
+  width: clamp(150px, 18vw, 300px);
+  aspect-ratio: 1 / 1;
+  background: url("assets/Esquinero.png") no-repeat top right / contain;
+  pointer-events: none;
+  z-index: 20;
+}
+.sound-toggle {
+  position: absolute;
+  z-index: 70;
+  top: clamp(22px, 2.8vw, 48px);
+  right: clamp(22px, 2.8vw, 50px);
+  width: clamp(45px, 4vw, 64px);
+  height: clamp(45px, 4vw, 64px);
+  border: 1px solid rgba(201, 149, 53, 0.6);
+  border-radius: 50%;
+  background: rgba(255, 250, 242, 0.78);
+  backdrop-filter: blur(10px);
+  color: var(--blue);
+  cursor: pointer;
+  font-size: 1.15rem;
+}
+.scene {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(55px, 8vh, 120px) clamp(45px, 8vw, 140px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.985);
+  transition:
+    opacity 0.9s ease,
+    transform 1s ease,
+    visibility 0s linear 1s;
+}
+.scene.active {
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1);
+  transition:
+    opacity 0.9s ease,
+    transform 1s ease,
+    visibility 0s;
+}
+.eyebrow {
+  color: #7b8797;
+  font-size: clamp(0.5rem, 0.72vw, 0.72rem);
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.logo-stage {
+  width: min(70vw, 900px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 0.55fr);
+  align-items: center;
+  gap: clamp(25px, 5vw, 80px);
+}
+.logo-main {
+  width: min(100%, 620px);
+  max-height: 34vh;
+  object-fit: contain;
+  justify-self: end;
+}
+.anniversary-main {
+  width: min(100%, 360px);
+  max-height: 30vh;
+  object-fit: contain;
+  justify-self: start;
+}
+.loading-stage {
+  text-align: center;
+}
+.loading-stage .eyebrow {
+  margin-bottom: 1.4rem;
+}
+.loading-stage p:last-child {
+  color: var(--blue);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  font-style: italic;
+}
+.loading-mark {
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 1.2rem;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  animation: pulse 1.4s infinite;
+}
+.loading-mark:after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 9px;
+  border: 1px solid var(--magenta);
+  border-radius: 50%;
+}
+@keyframes pulse {
+  50% {
+    transform: scale(1.05);
+    opacity: 0.65;
+  }
+}
+.welcome-stage {
+  width: min(100%, 1050px);
+  text-align: center;
+}
+.welcome-stage .eyebrow {
+  margin-bottom: clamp(1.5rem, 3vh, 3rem);
+}
+h1 {
+  color: var(--blue);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3.8rem, 8.4vw, 8rem);
+  font-weight: 500;
+  line-height: 0.82;
+  letter-spacing: -0.045em;
+}
+.welcome-stage h1 em {
+  color: var(--magenta);
+  font-style: italic;
+}
+.welcome-copy {
+  max-width: 760px;
+  margin: clamp(1.5rem, 3vh, 2.8rem) auto 0;
+  color: #687588;
+  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+  line-height: 1.7;
+}
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 3vw, 3.2rem);
+  min-width: min(100%, 480px);
+  min-height: 58px;
+  margin-top: clamp(2rem, 4vh, 4rem);
+  padding: 0 2rem;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  background: rgba(255, 250, 242, 0.6);
+  color: var(--blue);
+  cursor: pointer;
+  font-size: clamp(0.67rem, 0.8vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  transition: 0.35s;
+}
+.primary-button b {
+  color: var(--magenta);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.primary-button:hover {
+  background: var(--blue);
+  color: var(--paper);
+  transform: translateY(-3px);
+}
+/* =========================================================
+   ESCENA — 15 AÑOS · 15 VALORES
+   ========================================================= */
+
+.scene-lights {
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  align-items: flex-start;
+  justify-content: flex-start;
+  scrollbar-width: none;
+}
+
+.scene-lights::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.scene-lights.active {
+  display: flex;
+}
+
+.lights-stage {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  padding: clamp(4.5rem, 8vh, 7rem) clamp(2rem, 6vw, 7rem) 3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.lights-heading {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  text-align: center;
+
+  position: relative;
+  z-index: 3;
+}
+
+.lights-heading .eyebrow {
+  margin-bottom: 1.2rem;
+
+  color: #74849a;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.55rem, 0.8vw, 0.72rem);
+  font-weight: 600;
+
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+}
+
+.lights-heading h2 {
+  margin: 0;
+
+  color: var(--blue);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(3rem, 5vw, 5.3rem);
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.025em;
+}
+
+.lights-heading > p:last-child {
+  margin: 1rem 0 0;
+
+  color: #75859a;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: clamp(0.78rem, 1vw, 0.95rem);
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   ÁREA PRINCIPAL
+   ========================================================= */
+
+.candle-experience {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: clamp(2rem, 4vh, 4rem) auto 0;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(300px, 360px);
+
+  align-items: center;
+
+  gap: clamp(2rem, 5vw, 6rem);
+
+  flex: 1;
+
+  min-height: 0;
+}
+
+/* =========================================================
+   ÁREA DE LAS VELAS
+   ========================================================= */
+
+.candle-area {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================================================
+   GRID 3 × 5
+   ========================================================= */
+
+.candle-grid {
+  width: 100%;
+  max-width: 650px;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, minmax(70px, 1fr));
+
+  grid-template-rows: repeat(3, 1fr);
+
+  column-gap: clamp(0.5rem, 2vw, 2rem);
+
+  row-gap: clamp(1.4rem, 4vh, 3rem);
+
+  align-items: center;
+  justify-items: center;
+}
+
+/* =========================================================
+   BOTÓN DE VELA
+   ========================================================= */
+
+.candle {
+  width: 100%;
+  max-width: 72px;
+
+  height: clamp(112px, 14vh, 145px);
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  outline: none;
+
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+.candle:hover {
+  transform: translateY(-5px);
+}
+
+.candle:focus-visible {
+  outline: 1px solid rgba(201, 149, 53, 0.8);
+  outline-offset: 8px;
+}
+
+/* =========================================================
+   PORTAVELAS
+   ========================================================= */
+
+.candle-holder {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+}
+
+/* =========================================================
+   BASE DORADA
+   ========================================================= */
+
+.candle-holder::before {
+  content: "";
+
+  position: absolute;
+
+  bottom: 1px;
+
+  left: 50%;
+
+  width: 0;
+  height: 0;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  z-index: 1;
+  display: none;
+}
+
+.candle-holder::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 5px;
+
+  left: 50%;
+
+  width: 0;
+  height: 0;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: transparent;
+  opacity: 0;
+  z-index: 2;
+  display: none;
+}
+
+/* =========================================================
+   CUERPO DE LA VELA
+   ========================================================= */
+
+.candle-body {
+  position: absolute;
+
+  bottom: 9px;
+
+  left: 50%;
+
+  width: clamp(20px, 2.2vw, 27px);
+  height: clamp(78px, 10vh, 105px);
+
+  transform: translateX(-50%);
+
+  border-radius: 7px 7px 5px 5px;
+
+  background: linear-gradient(
+    90deg,
+    #b98325 0%,
+    #e7bd63 12%,
+    #fff8df 42%,
+    #f4dda0 66%,
+    #c78d28 100%
+  );
+
+  box-shadow:
+    inset 2px 0 4px rgba(255, 255, 255, 0.7),
+    inset -3px 0 5px rgba(137, 94, 20, 0.15),
+    0 12px 22px rgba(90, 67, 28, 0.14);
+
+  z-index: 3;
+
+  transition:
+    box-shadow 0.5s ease,
+    filter 0.5s ease;
+}
+
+/* =========================================================
+   BORDE SUPERIOR DE LA VELA
+   ========================================================= */
+
+.candle-body::before {
+  content: "";
+
+  position: absolute;
+
+  top: -4px;
+
+  left: 50%;
+
+  width: 100%;
+  height: 9px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: linear-gradient(180deg, #fffdf2 0%, #e9c873 100%);
+
+  box-shadow: 0 1px 3px rgba(145, 101, 24, 0.2);
+}
+
+/* =========================================================
+   MECHA
+   ========================================================= */
+
+.wick {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: calc(clamp(78px, 10vh, 105px) + 5px);
+
+  width: 2px;
+  height: 12px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(180deg, #172942, #4b3c2b);
+
+  border-radius: 2px;
+
+  z-index: 5;
+}
+
+/* =========================================================
+   LLAMA
+   ========================================================= */
+
+.flame {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: calc(clamp(78px, 10vh, 105px) + 14px);
+
+  width: 9px;
+  height: 17px;
+
+  transform: translateX(-50%) scale(0.25);
+
+  opacity: 0;
+
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+
+  background: radial-gradient(
+    circle at 50% 65%,
+    #fffdf0 0%,
+    #ffe6a0 28%,
+    #d99a2c 65%,
+    rgba(201, 149, 53, 0.1) 100%
+  );
+
+  filter: drop-shadow(0 0 7px rgba(255, 196, 73, 0.75));
+
+  z-index: 8;
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+/* =========================================================
+   LLAMA ENCENDIDA
+   ========================================================= */
+
+.candle.lit .flame {
+  opacity: 1;
+
+  transform: translateX(-50%) scale(1);
+
+  animation: candle-flame 1.8s ease-in-out infinite;
+}
+
+@keyframes candle-flame {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.08) rotate(2deg);
+  }
+}
+
+/* =========================================================
+   RESPLANDOR
+   ========================================================= */
+
+.candle.lit .candle-body {
+  box-shadow:
+    inset 2px 0 4px rgba(255, 255, 255, 0.75),
+    inset -3px 0 5px rgba(137, 94, 20, 0.15),
+    0 0 26px rgba(239, 190, 82, 0.32),
+    0 12px 22px rgba(90, 67, 28, 0.12);
+
+  filter: brightness(1.05);
+}
+
+.candle.lit .candle-holder::before {
+  box-shadow:
+    0 0 18px rgba(224, 173, 59, 0.38),
+    0 5px 10px rgba(135, 96, 25, 0.18);
+}
+
+/* =========================================================
+   TARJETA DEL VALOR
+   ========================================================= */
+
+.value-panel {
+  width: 100%;
+
+  opacity: 0;
+
+  transform: translateX(35px);
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+
+  align-self: center;
+}
+
+.value-panel.visible {
+  opacity: 1;
+
+  transform: translateX(0);
+
+  pointer-events: auto;
+}
+
+/* =========================================================
+   TARJETA
+   ========================================================= */
+
+.value-card {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 300px;
+
+  padding: 2.8rem 2.5rem;
+
+  border: 1px solid rgba(201, 149, 53, 0.65);
+
+  border-radius: 2px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 251, 241, 0.88),
+    rgba(249, 240, 224, 0.68)
+  );
+
+  box-shadow: 0 18px 55px rgba(45, 55, 71, 0.08);
+
+  text-align: center;
+
+  backdrop-filter: blur(6px);
+}
+
+/* detalle superior */
+
+.value-card::before {
+  content: "✦";
+
+  position: absolute;
+
+  top: -10px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  padding: 0 0.8rem;
+
+  color: var(--gold);
+
+  background: #f8f1e6;
+
+  font-size: 1rem;
+}
+
+/* =========================================================
+   NÚMERO
+   ========================================================= */
+
+.value-number {
+  color: var(--gold);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 3rem;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   DIVISOR
+   ========================================================= */
+
+.value-divider {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.7rem;
+
+  margin: 0.8rem auto 1rem;
+
+  color: var(--gold);
+
+  font-size: 0.75rem;
+}
+
+.value-divider::before,
+.value-divider::after {
+  content: "";
+
+  width: 50px;
+
+  height: 1px;
+
+  background: rgba(201, 149, 53, 0.45);
+}
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.value-card h3 {
+  margin: 0;
+
+  color: var(--magenta);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(2rem, 3vw, 3rem);
+
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   DESCRIPCIÓN
+   ========================================================= */
+
+.value-card p {
+  max-width: 280px;
+
+  margin: 1.4rem auto 0;
+
+  color: #34445a;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+
+  font-weight: 500;
+
+  line-height: 1.35;
+}
+
+/* =========================================================
+   PROGRESO
+   ========================================================= */
+
+.lights-progress {
+  width: min(720px, 70%);
+
+  margin: 2rem auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+}
+
+/* contador */
+
+.progress-counter {
+  min-width: 58px;
+
+  color: var(--blue);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+}
+
+.progress-counter b {
+  color: var(--magenta);
+
+  font-size: 1rem;
+}
+
+.progress-counter small {
+  color: #87919d;
+
+  font-size: 0.65rem;
+}
+
+/* línea */
+
+.progress-line {
+  flex: 1;
+
+  height: 2px;
+
+  overflow: hidden;
+
+  background: rgba(201, 149, 53, 0.18);
+}
+
+.progress-line span {
+  display: block;
+
+  width: 0%;
+
+  height: 100%;
+
+  background: linear-gradient(90deg, var(--magenta), var(--gold));
+
+  transition: width 0.7s ease;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .lights-stage {
+    padding: 4rem 4rem 2rem;
+  }
+
+  .candle-experience {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(240px, 290px);
+
+    gap: 2rem;
+  }
+
+  .candle-grid {
+    column-gap: 0.8rem;
+
+    row-gap: 2rem;
+  }
+
+  .candle {
+    height: 128px;
+  }
+
+  .candle-body {
+    height: 92px;
+  }
+
+  .wick {
+    bottom: 97px;
+  }
+
+  .flame {
+    bottom: 109px;
+  }
+
+  .value-card {
+    min-height: 270px;
+
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .scene-lights {
+    overflow-y: auto;
+  }
+
+  .lights-stage {
+    height: auto;
+    min-height: 100%;
+
+    padding: 4rem 1.2rem 2rem;
+  }
+
+  .lights-heading .eyebrow {
+    font-size: 0.48rem;
+
+    letter-spacing: 0.24em;
+  }
+
+  .lights-heading h2 {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+  }
+
+  .lights-heading > p:last-child {
+    font-size: 0.72rem;
+
+    max-width: 300px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* experiencia vertical */
+
+  .candle-experience {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2.2rem;
+
+    margin-top: 2rem;
+  }
+
+  /* grid móvil */
+
+  .candle-grid {
+    width: 100%;
+
+    max-width: 390px;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    column-gap: 0.15rem;
+
+    row-gap: 1.2rem;
+  }
+
+  .candle {
+    height: 115px;
+
+    max-width: 58px;
+  }
+
+  .candle-body {
+    width: 20px;
+
+    height: 78px;
+
+    bottom: 7px;
+  }
+
+  .candle-holder::before {
+    width: 38px;
+    height: 7px;
+
+    bottom: 1px;
+  }
+
+  .candle-holder::after {
+    width: 24px;
+    height: 5px;
+
+    bottom: 3px;
+  }
+
+  .wick {
+    height: 9px;
+
+    bottom: 88px;
+  }
+
+  .flame {
+    width: 11px;
+    height: 18px;
+
+    bottom: 98px;
+  }
+
+  /* tarjeta */
+
+  .value-panel {
+    width: 100%;
+
+    transform: translateY(20px);
+  }
+
+  .value-panel.visible {
+    transform: translateY(0);
+  }
+
+  .value-card {
+    min-height: auto;
+
+    padding: 2rem 1.5rem;
+
+    max-width: 380px;
+
+    margin: 0 auto;
+  }
+
+  .value-number {
+    font-size: 2.5rem;
+  }
+
+  .value-card h3 {
+    font-size: 2.3rem;
+  }
+
+  .value-card p {
+    font-size: 1.1rem;
+  }
+
+  /* progreso */
+
+  .lights-progress {
+    width: 100%;
+
+    max-width: 390px;
+
+    margin-top: 1.5rem;
+  }
+}
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 420px) {
+  .lights-stage {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
+  .candle-grid {
+    column-gap: 0;
+  }
+
+  .candle {
+    max-width: 52px;
+  }
+
+  .candle-body {
+    width: 18px;
+  }
+
+  .candle-holder::before {
+    width: 34px;
+  }
+}
+.progress-line span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--magenta), var(--gold));
+  transition: width 0.45s;
+}
+.scene-invitation {
+  padding: 0;
+  overflow: hidden;
+  align-items: stretch;
+}
+.invitation-scroll {
+  position: absolute;
+  inset: clamp(58px, 8.5vh, 110px) clamp(50px, 7.5vw, 130px)
+    clamp(45px, 6.5vh, 90px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  z-index: 2;
+}
+.invitation-scroll::-webkit-scrollbar {
+  display: none;
+}
+.invitation-content {
+  min-height: 100%;
+  padding: 3vh 3vw 10vh;
+}
+.invitation-intro {
+  width: min(100%, 900px);
+  margin: auto;
+  text-align: center;
+}
+.invitation-intro h2 {
+  margin-top: 1.1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 5.6vw, 6rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+}
+.invitation-intro h2 em {
+  color: var(--magenta);
+  font-style: italic;
+}
+.invitation-text {
+  width: min(100%, 780px);
+  margin: clamp(2rem, 4vh, 3.5rem) auto 0;
+}
+.invitation-text p {
+  margin-bottom: 1.35rem;
+  color: #3f5064;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.15rem, 1.55vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.35;
+}
+.invitation-thanks {
+  margin-top: 2.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3vw, 3.1rem);
+  font-style: italic;
+}
+.invitation-signature {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.invitation-signature strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+.invitation-signature strong:first-child {
+  color: var(--magenta);
+}
+.invitation-signature span {
+  color: var(--gold);
+}
+.invitation-signature small {
+  flex-basis: 100%;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+.event-information {
+  width: min(100%, 1120px);
+  margin: clamp(7vh, 10vh, 12vh) auto 0;
+}
+.event-intro {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3.6vw, 3.8rem);
+  font-style: italic;
+  line-height: 0.98;
+}
+.event-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 3.5rem;
+  border-top: 1px solid var(--gold-soft);
+  border-bottom: 1px solid var(--gold-soft);
+}
+.event-item {
+  min-height: 235px;
+  padding: 2.5rem 2.2rem;
+}
+.event-item + .event-item {
+  border-left: 1px solid var(--gold-soft);
+}
+.event-star {
+  color: var(--gold);
+}
+.event-item h3 {
+  margin-top: 0.8rem;
+  color: var(--magenta);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1;
+}
+.event-item p {
+  margin-top: 0.65rem;
+  color: var(--blue);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+.event-time {
+  font-weight: 700;
+}
+.dress-note {
+  color: #758092 !important;
+  margin-top: 1rem !important;
+}
+.location-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--magenta);
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.event-date {
+  text-align: center;
+  padding: 3rem 1rem 2.2rem;
+}
+.event-date span {
+  display: block;
+  color: #8b94a1;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+}
+.event-date strong {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: clamp(0.9rem, 1.35vw, 1.25rem);
+  letter-spacing: 0.1em;
+}
+.event-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  padding-bottom: 4rem;
+}
+.event-button {
+  min-height: 52px;
+  padding: 0 1.5rem;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--blue);
+  cursor: pointer;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: 0.3s;
+}
+.event-button:hover {
+  transform: translateY(-2px);
+  background: var(--blue);
+  color: var(--paper);
+}
+.event-button.primary {
+  background: var(--blue);
+  color: var(--paper);
+}
+.event-button.primary:hover {
+  background: var(--magenta);
+}
+.attendance-section {
+  max-width: 850px;
+  margin: 3vh auto 7vh;
+  padding: 3.5rem 2rem;
+  border-top: 1px solid var(--gold-soft);
+}
+.attendance-form-wrapper {
+  max-width: 650px;
+  margin: auto;
+  text-align: center;
+}
+.attendance-form-wrapper h2 {
+  margin-top: 0.8rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-weight: 500;
+  line-height: 0.9;
+}
+.attendance-form-wrapper h2 em {
+  color: var(--magenta);
+}
+.attendance-description {
+  margin: 1.5rem auto 2rem;
+  color: #637184;
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+.attendance-form {
+  display: flex;
+  justify-content: center;
+}
+.attendance-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.4rem;
+  min-height: 56px;
+  padding: 0 1.7rem;
+  border: 0;
+  background: var(--blue);
+  color: var(--paper);
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+.attendance-submit:hover {
+  background: var(--magenta);
+  transform: translateY(-2px);
+}
+.invitation-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2.5rem 0 1rem;
+  border-top: 1px solid var(--gold-soft);
+  color: #8a93a0;
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+.celebration-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0;
+}
+.celebration-particles.active {
+  opacity: 1;
+}
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 12px rgba(201, 149, 53, 0.65);
+  animation: fly 1.8s ease-out forwards;
+}
+@keyframes fly {
+  0% {
+    transform: translate(0, 35vh) scale(0.2);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), var(--dy)) scale(1);
+    opacity: 0;
+  }
+}
+@media (max-width: 900px) {
+  .scene {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+  .logo-stage {
+    width: 82vw;
+  }
+  .candle-layout {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+  }
+  .value-panel {
+    min-height: auto;
+    width: 100%;
+  }
+  .event-columns {
+    grid-template-columns: 1fr;
+  }
+  .event-item + .event-item {
+    border-left: 0;
+    border-top: 1px solid var(--gold-soft);
+  }
+}
+@media (max-width: 600px) {
+  .visual-frame {
+    inset: 9px;
+  }
+  .frame-line.inner {
+    inset: 7px;
+  }
+  .visual-frame::after {
+    width: clamp(120px, 32vw, 190px);
+    top: 8px;
+    right: 6px;
+  }
+  .sound-toggle {
+    top: 22px;
+    right: 22px;
+    width: 44px;
+    height: 44px;
+  }
+  .scene {
+    padding: 52px 28px 42px;
+  }
+  .logo-stage {
+    width: 82vw;
+    grid-template-columns: 1fr;
+    gap: 2.2vh;
+  }
+  .logo-main {
+    width: min(68vw, 310px);
+    max-height: 20vh;
+    justify-self: center;
+  }
+  .anniversary-main {
+    width: min(52vw, 210px);
+    max-height: 18vh;
+    justify-self: center;
+  }
+  .welcome-stage {
+    max-width: 430px;
+  }
+  .welcome-stage .eyebrow {
+    margin-bottom: 2.5vh;
+    font-size: 0.48rem;
+    letter-spacing: 0.25em;
+  }
+  .welcome-stage h1 {
+    font-size: clamp(2.9rem, 14vw, 4.2rem);
+    line-height: 0.84;
+  }
+  .welcome-copy {
+    margin-top: 3vh;
+    max-width: 340px;
+    font-size: 0.77rem;
+    line-height: 1.7;
+  }
+  .primary-button {
+    width: min(88vw, 360px);
+    min-width: 0;
+    min-height: 54px;
+    margin-top: 4vh;
+    padding: 0 1rem;
+    gap: 1rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.16em;
+  }
+  .scene-lights {
+    padding: 54px 24px 38px;
+  }
+  .lights-stage {
+    min-height: max-content;
+    padding-bottom: 3rem;
+  }
+  .lights-heading {
+    margin-bottom: 1.5rem;
+  }
+  .lights-heading h2 {
+    font-size: 2.35rem;
+  }
+  .lights-heading p:last-child {
+    max-width: 300px;
+    font-size: 0.68rem;
+    line-height: 1.5;
+  }
+  .candle-experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+    margin-top: 1.2rem;
+  }
+  .candle-area {
+    width: 100%;
+  }
+  .candle-grid {
+    width: min(360px, 100%);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(5, auto);
+    column-gap: 0.6rem;
+    row-gap: 1.25rem;
+  }
+  .candle {
+    width: 52px;
+    height: 112px;
+  }
+  .candle-body {
+    width: 22px;
+    height: 82px;
+  }
+  .wick {
+    bottom: 87px;
+  }
+  .flame {
+    width: 9px;
+    height: 17px;
+    bottom: 100px;
+  }
+  .value-panel {
+    width: min(100%, 390px);
+    padding: 0;
+    min-height: 0;
+  }
+  .value-panel span {
+    font-size: 2.4rem;
+  }
+  .value-panel h3 {
+    font-size: 1.8rem;
+  }
+  .value-panel p {
+    font-size: 0.69rem;
+    line-height: 1.5;
+  }
+  .lights-progress {
+    width: 100%;
+    margin-top: 0.8rem;
+  }
+  .invitation-scroll {
+    inset: 48px 25px 32px;
+  }
+  .invitation-content {
+    padding: 1.5vh 2vw 9vh;
+  }
+  .invitation-intro .eyebrow {
+    font-size: 0.46rem;
+    letter-spacing: 0.19em;
+  }
+  .invitation-intro h2 {
+    margin-top: 0.8rem;
+    font-size: clamp(2.35rem, 12vw, 3.7rem);
+    line-height: 0.88;
+  }
+  .invitation-text {
+    margin-top: 2rem;
+  }
+  .invitation-text p {
+    margin-bottom: 1.05rem;
+    font-size: 1.05rem;
+    line-height: 1.4;
+  }
+  .invitation-thanks {
+    font-size: 2rem;
+  }
+  .event-information {
+    margin-top: 8vh;
+  }
+  .event-intro {
+    font-size: 2.3rem;
+  }
+  .event-columns {
+    margin-top: 2.2rem;
+  }
+  .event-item {
+    padding: 1.7rem 1.1rem;
+  }
+  .event-item h3 {
+    font-size: 1.55rem;
+  }
+  .event-item p {
+    font-size: 0.76rem;
+  }
+  .event-date {
+    padding: 2.3rem 0.4rem 1.8rem;
+  }
+  .event-date strong {
+    font-size: 0.77rem;
+    letter-spacing: 0.06em;
+  }
+  .event-actions {
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 3rem;
+  }
+  .event-button {
+    width: 100%;
+  }
+  .attendance-section {
+    padding: 2.7rem 0.35rem 3rem;
+  }
+  .attendance-form-wrapper h2 {
+    font-size: 3rem;
+  }
+  .attendance-description {
+    font-size: 0.72rem;
+  }
+  .attendance-submit {
+    width: 100%;
+    font-size: 0.61rem;
+  }
+  .invitation-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.7;
+  }
+}
+@media (max-width: 380px) {
+  .scene {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+  .welcome-stage h1 {
+    font-size: 2.7rem;
+  }
+  .welcome-copy {
+    font-size: 0.71rem;
+  }
+  .primary-button {
+    width: 93vw;
+    font-size: 0.53rem;
+  }
+  .candle {
+    width: 46px;
+    height: 104px;
+  }
+  .candle-body {
+    width: 20px;
+    height: 76px;
+  }
+  .wick {
+    bottom: 81px;
+  }
+  .flame {
+    bottom: 94px;
+  }
+  .invitation-scroll {
+    inset: 47px 20px 28px;
+  }
+  .invitation-intro h2 {
+    font-size: 2.25rem;
+  }
+  .invitation-text p {
+    font-size: 0.98rem;
+  }
+}
+@media (max-height: 600px) and (orientation: landscape) {
+  .scene {
+    padding-top: 32px;
+    padding-bottom: 28px;
+  }
+  .welcome-stage h1 {
+    font-size: clamp(2.7rem, 10vh, 5.2rem);
+  }
+  .welcome-copy {
+    margin-top: 1.5vh;
+  }
+  .primary-button {
+    margin-top: 2vh;
+    min-height: 48px;
+  }
+  .logo-main {
+    max-height: 28vh;
+  }
+  .anniversary-main {
+    max-height: 25vh;
+  }
+  .candle {
+    height: 108px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.welcome-branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 5vw, 80px);
+  margin: 0 auto clamp(2rem, 4vh, 4rem);
+  width: min(100%, 720px);
+}
+
+.welcome-logo-cmc {
+  width: clamp(210px, 24vw, 390px);
+  max-height: 20vh;
+  object-fit: contain;
+}
+
+.welcome-logo-15 {
+  width: clamp(120px, 15vw, 250px);
+  max-height: 18vh;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .welcome-branding {
+    flex-direction: column;
+    gap: 1.5vh;
+    margin-bottom: 2.5vh;
+    width: 100%;
+  }
+
+  .welcome-logo-cmc {
+    width: min(68vw, 290px);
+    max-height: 15vh;
+  }
+
+  .welcome-logo-15 {
+    width: min(43vw, 190px);
+    max-height: 13vh;
+  }
+}
+
+/* =========================================================
+   DECORACIÓN FINAL — ESQUINERO REAL
+   ========================================================= */
+.visual-frame .botanical,
+.visual-frame .top-right,
+.visual-frame .bottom-left {
+  display: none !important;
+}
+
+.visual-frame::after {
+  content: "";
+  position: absolute;
+  top: clamp(8px, 1.2vw, 18px);
+  right: clamp(8px, 1.2vw, 18px);
+  width: clamp(150px, 18vw, 300px);
+  aspect-ratio: 1 / 1;
+  background: url("assets/Esquinero.png") no-repeat top right / contain;
+  pointer-events: none;
+  z-index: 20;
+}
+
+@media (max-width: 700px) {
+  .visual-frame::after {
+    width: clamp(120px, 32vw, 190px);
+    top: 8px;
+    right: 6px;
+  }
+}
+
+@media (max-width: 420px) {
+  .visual-frame::after {
+    width: clamp(105px, 34vw, 160px);
+  }
+}
+/* =========================================================
+   ESQUINEROS DECORATIVOS
+   ========================================================= */
+
+/* Eliminar completamente las decoraciones antiguas */
+.visual-frame .frame-botanical,
+.visual-frame .botanical,
+.visual-frame .botanical-decoration {
+    display: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   ESQUINERO SUPERIOR IZQUIERDO
+   --------------------------------------------------------- */
+
+.visual-frame::before {
+    content: "";
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    width: clamp(190px, 20vw, 330px);
+    aspect-ratio: 1 / 1;
+
+    background-image: url("assets/Esquinero2.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+
+    pointer-events: none;
+
+    z-index: 20;
+}
+
+
+/* ---------------------------------------------------------
+   ESQUINERO SUPERIOR DERECHO
+   --------------------------------------------------------- */
+
+.visual-frame::after {
+    content: "";
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: clamp(190px, 20vw, 330px);
+    aspect-ratio: 1 / 1;
+
+    background-image: url("assets/Esquinero.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+
+    pointer-events: none;
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .visual-frame::before,
+    .visual-frame::after {
+        width: clamp(170px, 22vw, 280px);
+        top: 8px;
+    }
+
+    .visual-frame::before {
+        left: 8px;
+    }
+
+    .visual-frame::after {
+        right: 8px;
+    }
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .visual-frame::before,
+    .visual-frame::after {
+        width: clamp(125px, 32vw, 210px);
+        top: 6px;
+    }
+
+    .visual-frame::before {
+        left: 5px;
+    }
+
+    .visual-frame::after {
+        right: 5px;
+    }
+}
+
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .visual-frame::before,
+    .visual-frame::after {
+        width: clamp(100px, 35vw, 165px);
+        top: 4px;
+    }
+
+    .visual-frame::before {
+        left: 3px;
+    }
+
+    .visual-frame::after {
+        right: 3px;
+    }
+}
+/* =========================================================
+   LOGOS — INVITACIÓN
+   ========================================================= */
+
+.invitation-branding {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(32px, 5vw, 80px);
+
+    margin: 0 auto clamp(28px, 4vw, 50px);
+
+    padding-top: 10px;
+}
+
+
+/* Logo CMC */
+
+.invitation-logo-cmc {
+    display: block;
+
+    width: clamp(150px, 16vw, 230px);
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* Logo 15 años */
+
+.invitation-logo-15 {
+    display: block;
+
+    width: clamp(120px, 13vw, 190px);
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .invitation-branding {
+        gap: 35px;
+
+        margin-bottom: 35px;
+    }
+
+    .invitation-logo-cmc {
+        width: 180px;
+    }
+
+    .invitation-logo-15 {
+        width: 150px;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .invitation-branding {
+        flex-direction: column;
+
+        gap: 18px;
+
+        margin-bottom: 30px;
+
+        padding-top: 5px;
+    }
+
+    .invitation-logo-cmc {
+        width: min(190px, 58vw);
+    }
+
+    .invitation-logo-15 {
+        width: min(150px, 46vw);
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .invitation-branding {
+        gap: 14px;
+
+        margin-bottom: 25px;
+    }
+
+    .invitation-logo-cmc {
+        width: 165px;
+    }
+
+    .invitation-logo-15 {
+        width: 135px;
+    }
+}
+
+
+
+
+------------
+/* =========================================================
+   CELEBRACIÓN FINAL · 15 AÑOS
+========================================================= */
+
+/* =========================================================
+   CELEBRACIÓN FINAL — LOGO 15 AÑOS
+========================================================= */
+
+#celebrationParticles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 80;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 1s ease,
+    visibility 1s ease;
+}
+
+/* Cuando comienza la celebración */
+#celebrationParticles.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================================================
+   LOGO 15 AÑOS
+========================================================= */
+
+.celebration-logo {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: min(430px, 48vw);
+  max-width: 430px;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.82);
+
+  opacity: 0;
+
+  z-index: 90;
+
+  filter:
+    drop-shadow(0 12px 30px rgba(151, 103, 25, 0.18));
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.5s cubic-bezier(.16, 1, .3, 1),
+    filter 1.2s ease;
+}
+
+/* Entrada elegante */
+#celebrationParticles.active .celebration-logo {
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1);
+}
+
+/* =========================================================
+   PARTÍCULAS DORADAS
+========================================================= */
+
+#celebrationParticles .particle {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #fff8d8 0%,
+      #f5d77a 35%,
+      #d89d2b 70%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 8px rgba(245, 211, 105, 0.95),
+    0 0 18px rgba(218, 163, 45, 0.65);
+
+  opacity: 0;
+
+  animation:
+    goldenParticle 2.4s ease-out forwards;
+}
+
+/* Movimiento de las partículas */
+
+@keyframes goldenParticle {
+
+  0% {
+    opacity: 0;
+    transform:
+      translate(0, 0)
+      scale(0.2);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translate(var(--dx), var(--dy))
+      scale(1.2);
+  }
+}
+
+/* =========================================================
+   DESAPARICIÓN FINAL
+========================================================= */
+
+#celebrationParticles.fade-out {
+  opacity: 0;
+}
+
+#celebrationParticles.fade-out .celebration-logo {
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1.08);
+
+  filter:
+    blur(8px)
+    drop-shadow(0 0 0 transparent);
+
+  transition:
+    opacity 1.4s ease,
+    transform 1.4s ease,
+    filter 1.4s ease;
+}
+
+/* =========================================================
+   DURANTE LA CELEBRACIÓN:
+   LAS VELAS Y LA TARJETA DESAPARECEN
+========================================================= */
+
+#scene-lights.celebrating .lights-stage {
+  opacity: 0;
+  transform: scale(0.985);
+  filter: blur(4px);
+
+  pointer-events: none;
+
+  transition:
+    opacity 1.3s ease,
+    transform 1.5s ease,
+    filter 1.3s ease;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .celebration-logo {
+    width: min(330px, 70vw);
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .celebration-logo {
+    width: min(280px, 72vw);
+  }
+
+}
+
+
+/* =========================================================
+   REVELACIÓN FINAL — 15 AÑOS
+   ========================================================= */
+
+#anniversaryCelebration {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition:
+    opacity 1.4s ease,
+    visibility 1.4s ease;
+}
+
+/* Cuando comienza la celebración */
+
+#anniversaryCelebration.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================================================
+   IMAGEN 15 AÑOS
+   ========================================================= */
+
+.anniversary-image {
+  position: relative;
+  z-index: 3;
+
+  width: min(520px, 42vw);
+  max-width: 520px;
+  height: auto;
+
+  object-fit: contain;
+
+  opacity: 0;
+  transform:
+    scale(0.82)
+    translateY(12px);
+
+  filter:
+    drop-shadow(
+      0 12px 30px
+      rgba(185, 130, 30, 0.18)
+    );
+
+  animation:
+    anniversaryLogoIn 1.8s
+    cubic-bezier(.16,1,.3,1)
+    forwards;
+}
+
+/* =========================================================
+   ENTRADA DEL LOGO
+   ========================================================= */
+
+@keyframes anniversaryLogoIn {
+
+  0% {
+    opacity: 0;
+    transform:
+      scale(0.78)
+      translateY(20px);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform:
+      scale(1)
+      translateY(0);
+  }
+}
+
+/* =========================================================
+   PARTÍCULAS
+   ========================================================= */
+
+.anniversary-particles {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   PARTÍCULA DORADA
+   ========================================================= */
+
+.gold-particle {
+  position: absolute;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 224, 145, 0.95) 28%,
+      rgba(207, 145, 35, 0.8) 60%,
+      rgba(207, 145, 35, 0) 100%
+    );
+
+  box-shadow:
+    0 0 6px
+    rgba(224, 171, 68, 0.9),
+
+    0 0 14px
+    rgba(224, 171, 68, 0.55);
+
+  opacity: 0;
+
+  animation-name:
+    goldenParticle;
+
+  animation-timing-function:
+    cubic-bezier(.16,.7,.3,1);
+
+  animation-fill-mode:
+    forwards;
+}
+
+/* =========================================================
+   MOVIMIENTO DE PARTÍCULAS
+   ========================================================= */
+
+@keyframes goldenParticle {
+
+  0% {
+    opacity: 0;
+    transform:
+      translate3d(0, 0, 0)
+      scale(0.2);
+  }
+
+  12% {
+    opacity: 1;
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  70% {
+    opacity: 0.85;
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translate3d(
+        var(--particle-x),
+        var(--particle-y),
+        0
+      )
+      scale(0.05);
+  }
+}
+
+/* =========================================================
+   DESVANECIMIENTO FINAL
+   ========================================================= */
+
+#anniversaryCelebration.fade-out {
+  opacity: 0;
+
+  transition:
+    opacity 1.3s
+    cubic-bezier(.4,0,.2,1);
+}
+
+/* =========================================================
+   DESAPARECER VELAS + TARJETA
+   ========================================================= */
+
+.scene-lights.anniversary-reveal
+  .lights-heading,
+.scene-lights.anniversary-reveal
+  .candle-experience,
+.scene-lights.anniversary-reveal
+  .lights-progress {
+  opacity: 0;
+
+  transform:
+    scale(0.98);
+
+  filter:
+    blur(5px);
+
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease,
+    filter 1.5s ease;
+}
+
+/* =========================================================
+   DESVANECIMIENTO COMPLETO DE LA ESCENA
+   ========================================================= */
+
+.scene-lights.fade-lights {
+  opacity: 0;
+
+  transition:
+    opacity 1.2s ease;
+}
+
+/* =========================================================
+   RESPONSIVE — CELULAR
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .anniversary-image {
+    width: min(360px, 72vw);
+
+    filter:
+      drop-shadow(
+        0 10px 25px
+        rgba(185, 130, 30, 0.18)
+      );
+  }
+}
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  .anniversary-image {
+    width: min(300px, 78vw);
+  }
+}
+
+/* =========================================================
+   REDUCIR MOVIMIENTO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .anniversary-image {
+    animation: none;
+
+    opacity: 1;
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+
+  .gold-particle {
+    animation: none;
+
+    opacity: 0.6;
+  }
+
+  #anniversaryCelebration,
+  #anniversaryCelebration.fade-out,
+  .scene-lights.fade-lights {
+    transition-duration: 0.5s;
+  }
+}
